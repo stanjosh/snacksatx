@@ -1,0 +1,55 @@
+---
+
+const { image, alt } = Astro.props
+
+---
+
+
+<div class="imgLink">
+    <img src={image} alt={alt} />
+    <div class="imgText">
+        {alt}
+    </div>
+</div>
+
+<style>
+    .imgText {
+        background-color: rgba(255, 255, 255, 0.745);
+        color: rgb(69, 67, 52);
+        font-family: 'Onest', sans-serif;
+        position: relative;
+        top: -0.5rem;
+        text-align: center;
+
+        border-radius: 0 0 1rem 1rem;
+        width: 100%;
+    }
+    .imgLink {
+        border: none;
+        background: none;
+        cursor: pointer;
+        
+        flex: 1;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        
+        
+        transition: all 0.3s;
+    }
+    .imgLink img {
+
+        max-height: fit-content;
+        width: 100%;
+        margin: 0;
+        padding : 0;
+    }
+
+    media (max-width: 600px) {
+        .imgLink {
+            max-height: 100%;
+            width: 100%;
+        }
+    }
+
+</style>

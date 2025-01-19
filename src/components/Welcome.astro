@@ -1,44 +1,57 @@
 ---
 import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
+import Carousel from './Carousel.astro';
+import CarouselImage from './CarouselImage.astro';
 ---
 
 <div id="container">
-	<h1>snacks for my friends</h1>
-	<h2>Bespoke Bar Snacks curated to accent your menu and elevate your guest&apos;s experience. Let&apos;s be friends!</h2>
 
 
-	<a href="mailto:stevendaedelus@gmail.com">email us</a>
+	<Carousel>
+		<CarouselImage image={"/pineapple.png"} alt="grilled pineapple slices" />
+		<CarouselImage image={"/olive.png"} alt="an array of olives in various colors in a dish" />
+		<CarouselImage image={"/platter.png"} alt="a snack platter with glazed nuts and colorful olives" />
+		<CarouselImage image={"/popcorn.png"} alt="golden spiced popcorn" />
+	</Carousel>
+
+
 
 
 </div>
 
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Onest:wght@100..900&display=swap');
 	#container {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: start;
 		align-items: center;
 		height: 100vh;
-		background-size: cover;
-		background-position: center;
-		color: #ccc;
+		padding-top: 2rem;
+	}
+	body {
+		background-color: rgb(255, 130, 130);
+		margin: 0;
+		font-family: 'Onest', sans-serif;
+		color: rgb(69, 67, 52);
 	}
 
 	h1 {
+		font-family: 'Bebas Neue', cursive;
 		font-size: 3rem;
+		padding: 5cqw;
 	}
 
 	h2 {
 		font-size: 1.5rem;
+		padding-left: 5cqw;
+		padding-right: 5cqw;
 	}
 
 	a {
 		font-size: 1.5rem;
 		text-decoration: none;
-		border: 1px solid white;
-		padding: 1rem 2rem;
-		border-radius: 5px;
 	}
 </style>

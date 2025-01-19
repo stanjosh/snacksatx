@@ -5,9 +5,13 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>snacks for my friends</title>
 	</head>
 	<body>
+		<header>
+			<h1>snacks for my friends</h1>
+			Bespoke Bar Snacks curated to accent your menu and elevate your guest&apos;s experience. <a href="mailto:stevendaedelus@gmail.com">Let&apos;s be friends!</a>
+		</header>
 		<slot />
 	</body>
 </html>
@@ -18,5 +22,15 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+	header {
+		background-color: rgb(255, 130, 130);
+		color: rgb(69, 67, 52);
+		font-family: 'Onest', sans-serif;
+		text-align: center;
+		align-items: center;
+		padding: 1rem;
+		display: flex;
+		border: 1px solid black;
 	}
 </style>
