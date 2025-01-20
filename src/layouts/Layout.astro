@@ -9,8 +9,19 @@
 	</head>
 	<body>
 		<header>
-			<h1>snacks for my friends</h1>
-			Bespoke Bar Snacks curated to accent your menu and elevate your guest&apos;s experience. <a href="mailto:stevendaedelus@gmail.com">Let&apos;s be friends!</a>
+			<div class="logo">
+				<img src="/favicon.svg" alt="olive" class="olive"/>
+
+				<div class="logo-text">
+					<h1>snacks</h1>
+					<h2>for&nbsp;my&nbsp;friends</h2>
+				</div>
+			<div class="header-link">
+				<a href="mailto:stevendaedelus@gmail.com">Let&apos;s be friends!</a>
+			</div>
+
+			</div>
+			<p>Bespoke Bar Snacks curated to accent your menu and elevate your guest&apos;s experience.</p>
 		</header>
 		<slot />
 	</body>
@@ -23,6 +34,10 @@
 		width: 100%;
 		height: 100%;
 	}
+	.olive {
+		width: 5rem;
+		height: 5rem;
+	}
 	header {
 		background-color: rgb(255, 130, 130);
 		color: rgb(69, 67, 52);
@@ -31,6 +46,68 @@
 		align-items: center;
 		padding: 1rem;
 		display: flex;
-		border: 1px solid black;
+		flex-wrap: wrap;
+		flex-direction: row-reverse;
 	}
+
+	header h1 {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 3rem;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: start;
+	}
+
+	header h2 {
+		font-size: 1rem;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: start;
+	}
+	header img {
+		margin-right: 1rem;
+
+	}
+
+	header p {
+		font-size: 1.5rem;
+		padding-left: 5cqw;
+		padding-right: 5cqw;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		flex: 1 0, 800px;
+	}
+
+	.logo-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header-link {
+		margin-right: auto;
+		margin-left: 1rem;
+	}
+
+	@media screen and (max-width: 800px) {
+		header h1 {
+			font-size: 2rem;
+		}
+		header h2 {
+			font-size: 1rem;
+		}
+		header p {
+			font-size: 1rem;
+		}
+		.olive {
+			width: 3rem;
+			height: 3rem;
+		}
+
+	}
+
 </style>
